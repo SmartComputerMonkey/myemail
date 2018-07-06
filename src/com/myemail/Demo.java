@@ -18,10 +18,10 @@ public class Demo {
         session.setDebug(true);
         Message msg = new MimeMessage(session);
         msg.setText("hello my first email!");
-        msg.setFrom(new InternetAddress("18731788052@163.com"));
+        msg.setFrom(new InternetAddress("itmonkey_test@sohu.com"));
         Transport transport = session.getTransport();
-        transport.connect("smtp.163.com",25,"itmonkey007","JZ19920610");
-        transport.send(msg,new Address[]{new InternetAddress("itmonkey007@163.com")});
+        transport.connect("smtp.sohu.com",25,"itmonkey_test","JZ19920610");
+        transport.sendMessage(msg,new Address[]{new InternetAddress("itmonkey_test@sina.com")});
         transport.close();
     }
 }
